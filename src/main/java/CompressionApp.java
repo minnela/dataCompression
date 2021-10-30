@@ -8,8 +8,8 @@ public class CompressionApp {
 
         int[] compressedData = Compressor.compressData(FileReader.readFile());
         int[] uncompressedData = Compressor.uncompressData(compressedData);
-        double ratio = RatioCalculator.calculateCompressionRatio(compressedData.length, uncompressedData.length);
-        System.out.printf("Compression Ratio: %.3f %n", ratio);
+        System.out.printf("Compression Ratio: %.3f %n",
+                RatioCalculator.calculateCompressionRatio(compressedData.length, uncompressedData.length));
 
     }
 }
